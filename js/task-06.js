@@ -6,9 +6,13 @@ const onInputChange = (event) => {
     let targetDataLength = Number(event.currentTarget.dataset.length);
 
     if (targetValueLength === targetDataLength) {
-        return event.currentTarget.classList.add('valid');
-    }       
-    return event.currentTarget.classList.add('invalid');
+        event.currentTarget.classList.add('valid');
+        event.currentTarget.classList.remove('invalid');
+    } else {
+        event.currentTarget.classList.add('invalid');
+        event.currentTarget.classList.remove('valid');
+    };
+     
     
 }
 
