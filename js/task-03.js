@@ -17,7 +17,7 @@ const imagesListEl = document.querySelector('#gallery');
 
 const makeListItemMarkup = ({url, alt}) => {
     return `
-    <li>
+    <li class = 'gallery-ellement'>
     <img src='${url}' alt='${alt}'>
     </li>
     `;
@@ -26,4 +26,6 @@ const makeListItemMarkup = ({url, alt}) => {
 const listItemsMarkup = images.map(makeListItemMarkup).join('');
 
 imagesListEl.insertAdjacentHTML('beforeend', listItemsMarkup);
+imagesListEl.classList.add('gallery');
+
 
